@@ -13,7 +13,7 @@ warnings.simplefilter("error", InconsistentVersionWarning)
 
 app.static_folder = 'static'
 
-model=pickle.load(open(r"models\xgboost.pkl",'rb'))
+model=pickle.load(open("models/xgboost.pkl",'rb'))
 
 
 
