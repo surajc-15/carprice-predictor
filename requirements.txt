@@ -1,0 +1,6 @@
+Flask
+scikit-learn
+pandas
+numpy
+Gunicorn
+# Add other dependencies as needed

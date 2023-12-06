@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        .content {
+            display: inline-flex;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    </style>
+
+</head>
+
+<body>
+    <div class="content">
+        <h4><a href="{{ url_for('static', filename='carmodels.html') }}" target="_blank">Don't konw model number?</a></h4>
+        <form id="carPriceForm" action="/predict" method="post">
+
+            <label for="carmodel">Car Model:</label>
+            <input type="number" id="carmodel" name="carmodel" placeholder="enter the car model number" required>
+
+            <label for="kilometer">Kilometer Driven:</label>
+            <input type="text" id="kilometer" name="kilometer" placeholder="enter the car driven distance in km"
+                required>
+
+            <label for="Power">Power:</label>
+            <input type="text" id="Power" name="Power" placeholder="mention the power of car you need.." required>
+
+            <label for="engine">Engine:</label>
+            <input type="text" id="engine" name="engine" placeholder="select engine cc" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" placeholder="mention when did you buy this car" required>
+
+            <label for="seat">Seats:</label>
+            <input type="number" id="seat" name="seat" placeholder="mention no of seats you want" required>
+
+            <label for="mileage">Mileage:</label>
+            <input type="text" id="mileage" name="mileage" placeholder="mention the mileage you want" required>
+
+            <label for="fueltype">Fuel type:</label>
+            <select id="fueltype" name="fueltype" required>
+                <option value="0">CNG</option>
+                <option value="1">DIESEL</option>
+                <option value="3">PETROL</option>
+                <option value="2">LPG</option>
+            </select>
+
+            <label for="transmission">Transission:</label>
+            <select name="transmission" id="transmission" required>
+                <option value="1">Manual</option>
+                <option value="0">Automatic</option>
+            </select>
+
+            <label for="ownertype">Owner type</label>
+            <select name="ownertype" id="ownertype" required>
+                <option value="0">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+                <option value="1">Fourth and above</option>
+            </select>
+
+            <label for="location">Location</label>
+            <select name="location" id="location" required>
+                <option value="0">Ahmedabad</option>
+                <option value="1">Bangalore</option>
+                <option value="2">Chennai</option>
+                <option value="3">Coimbotore</option>
+                <option value="4">Delhi</option>
+                <option value="5">Hyderabad</option>
+                <option value="6">Jaipur</option>
+                <option value="7">Kochi</option>
+                <option value="8">KOlkata</option>
+                <option value="9">Mumbai</option>
+                <option value="10">Pune</option>
+            </select>
+            <button type="submit" onclick="" >Predict Price</button>
+        </form>
+        
+    </div>
+    <script>
+        
+    </script>
+
+</body>
+
+</html>
